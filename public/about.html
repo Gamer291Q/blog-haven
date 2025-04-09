@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Haven - About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        #aboutContent {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #aboutContent h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        #aboutContent p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        #backBtn {
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #backBtn:hover {
+            background-color: #219653;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Blog Haven</h1>
+        <div class="user-menu">
+            <button id="homeBtn">Home</button>
+            <button id="aboutBtn">About Us</button>
+            <span id="userIcon">👤</span>
+            <div id="userDropdown" class="dropdown" style="display:none;">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Sign Up</button>
+                <button id="profileBtn" style="display:none;">Profile</button>
+                <button id="logoutBtn" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="aboutContent">
+            <h2>About Blog Haven</h2>
+            <p>Welcome to Blog Haven, a platform created to allow users to share their thoughts, ideas, and stories with the world. Our mission is to provide a simple, user-friendly space where creativity thrives, and community engagement is encouraged through comments and likes.</p>
+            <p>Whether you're a seasoned writer or just starting out, Blog Haven is designed to be your haven for expression. We value every voice and aim to foster a supportive environment for all our users.</p>
+            <button id="backBtn">Back</button>
+        </div>
+    </main>
+
+    <div id="feedback" class="feedback" style="display:none;"></div>
+
+    <script src="about.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d4bf7b2f8b87b0',t:'MTc0NDE0NjU4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

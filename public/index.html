@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .user-menu {
+            display: flex;
+            align-items: center;
+        }
+        .user-menu button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .user-menu button:hover {
+            background-color: #2980b9;
+        }
+        #searchBar {
+            padding: 5px;
+            margin-left: 10px;
+            border-radius: 4px;
+            border: none;
+        }
+        #addBlogBtn {
+            background-color: #27ae60;
+        }
+        #addBlogBtn:hover {
+            background-color: #219653;
+        }
+        #userIcon {
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            background-color: #34495e;
+            border-radius: 4px;
+            display: none;
+        }
+        .dropdown button {
+            display: block;
+            width: 100px;
+            padding: 5px;
+            text-align: left;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .dropdown button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Blog Haven</h1>
+        <div class="user-menu">
+            <button id="homeBtn">Home</button>
+            <button id="aboutBtn">About Us</button>
+            <input id="searchBar" type="text" placeholder="Search blogs...">
+            <button id="addBlogBtn" style="display:none;">Add Blog</button>
+            <span id="userIcon">👤</span>
+            <div id="userDropdown" class="dropdown" style="display:none;">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Sign Up</button>
+                <button id="profileBtn" style="display:none;">Profile</button>
+                <button id="logoutBtn" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="blogs"></section>
+        <aside id="siteInfo">
+            <h2>🚀🚀Blog Haven – Powered by Passion, Built with Code🚀🚀.</h2>
+            <p> Blog Haven is a space where thoughts turn into words and ideas find their voice. Whether you're sharing personal experiences, creative stories, or opinions on current topics, Blog Haven gives you the freedom to express and connect. It's a simple, welcoming platform built for anyone who loves to write.</p>
+        </aside>
+    </main>
+
+    <section id="blogForm" style="display:none;">
+        <h2>Add New Blog</h2>
+        <input id="title" placeholder="Blog Title">
+        <textarea id="content" placeholder="Blog Content"></textarea>
+        <input id="image" type="file" accept="image/*">
+        <button id="submitBlog">Submit Blog</button>
+        <button id="cancelBlog">Cancel</button>
+    </section>
+    
+
+    <section id="editForm" style="display:none;">
+        <h2>Edit Blog</h2>
+        <input id="editTitle" placeholder="Blog Title">
+        <textarea id="editContent" placeholder="Blog Content"></textarea>
+        <input id="editImage" type="file" accept="image/*">
+        <button id="submitEdit">Save Changes</button>
+    </section>
+
+    <section id="loginForm" style="display:none;">
+        <h2>Login</h2>
+        <input id="loginUsername" placeholder="Username">
+        <div class="password-container">
+            <input id="loginPassword" type="password" placeholder="Password">
+            <span id="toggleLoginPassword" class="toggle-password">👁️</span>
+        </div>
+        <button id="loginSubmit">Login</button>
+        <button id="loginCancel">Cancel</button>
+    </section>
+
+    <section id="signupForm" style="display:none;">
+        <h2>Sign Up</h2>
+        <input id="signupUsername" placeholder="Username">
+        <div class="password-container">
+            <input id="signupPassword" type="password" placeholder="Password">
+            <span id="toggleSignupPassword" class="toggle-password">👁️</span>
+        </div>
+        <button id="signupSubmit">Sign Up</button>
+        <button id="signupCancel">Cancel</button>
+    </section>
+
+    <section id="profilePage" style="display:none;">
+        <h2 id="profileTitle">Your Blogs</h2>
+        <div id="profileBlogs"></div>
+        <button id="profileBackBtn">Back</button>
+    </section>
+
+    <div id="feedback" class="feedback" style="display:none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
